@@ -19,9 +19,61 @@
 <br><br><br>-->
 
 <b>Click on model to view in AR:::: </b><br><br><br><br>
-<a href="intent://arvr.google.com/scene-viewer/1.0?file=https://tpathakethosh.github.io/craneAR.github.io/Valve.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;">
-     <img src = "" width = "250" height = "470"/>
+<a id = "content">
+     <img src = "valve.png" width = "377" height = "422"/>
 <br><br><br><br>
  <b>............ Model Viewer ............</b><br><br><br></center>
+
+
+ <script> 
+    var os = getMobileOperatingSystem();
+
+    var mydiv = document.getElementById("content");
+   // var aTag = document.createElement('a');
+    //aTag.setAttribute('href',"yourlink.htm");
+   // aTag.innerText = "link text";
+    //mydiv.appendChild(aTag);
+    
+    if (os == 'iOS')
+
+    {
+        console.log("ios");
+
+        mydiv.href = "https://tpathakethosh.github.io/craneAR.github.io/valve.usdz#custom=https://www.cranefs.com/page/downloads/videos"
+        mydiv.rel = "ar"
+       // window.location.replace("https://tpathakethosh.github.io/craneAR.github.io/valve.usdz#custom=https://www.cranefs.com/page/downloads/videos");
+      // "iOS" +'<br>';
+      // document.write(ios);
+    }
+    else if(os == 'Android')
+    {
+        console.log("Android");
+
+        mydiv.href = "intent://arvr.google.com/scene-viewer/1.0?file=https://tpathakethosh.github.io/craneAR.github.io/Valve.glb#Intent;scheme=https;package=com.google.android.googlequicksearchbox;action=android.intent.action.VIEW;S.browser_fallback_url=https://developers.google.com/ar;end;" 
+        //window.location.replace("https://tpathakethosh.github.io/craneAR.github.io/valve.html");
+        //document.write(android);
+    
+        //"android" +'<br>';
+    }
+    
+    
+    function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    if (/iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    return "unknown";
+}
     </body>
 </html>
