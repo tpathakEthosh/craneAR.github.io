@@ -1,58 +1,31 @@
-<!DOCTYPE HTML> 
-<html> 
-  
-<head> 
-    <title> 
-        JavaScript  
-      | Detecting the Operating System of User. 
-    </title> 
-</head> 
-  
-<body style="text-align:center;" id="body"> 
-  
-    
-   
- <script> 
-    var os = getMobileOperatingSystem();
-    if (os == 'iOS')
+<html>
+    <head>
+        <title>Web AR</title>
+        <style>
+            model-viewer{
+                width : 300px;
+                height:400px;
+                margin:0 auto;
+            }
+        </style>
+         <meta name="viewport" content="width=device-width, user-scalable=no,minimum-scale=1.0, maximum-scale=1.0">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+    </head>
+    <body>
+        <center><b>............ Model Viewer ............</b><br><br><br>
+ <!--<model-viewer src="assets/CHAHIN_BOTTLE_OF_SODA.gltf" camera-controls ar ios-src = "assets/CHAHIN_BOTTLE_OF_SODA.usdz" alt="soda bottle"></model-viewer>
+ 
+<br><br><br>-->
 
-    {
-        console.log("ios");
-        window.location.replace("https://tpathakethosh.github.io/craneAR.github.io/Valve.html");
-       // window.location.replace("https://tpathakethosh.github.io/craneAR.github.io/valve.usdz#custom=https://www.cranefs.com/page/downloads/videos");
-       "iOS" +'<br>';
-       document.write(ios);
-    }
-    else if(os == 'Android')
-    {
-        console.log("Android");
-        window.location.replace("https://tpathakethosh.github.io/craneAR.github.io/Valve.html");
-        document.write(android);
-    
-        "android" +'<br>';
-    }
-    
-    
-    function getMobileOperatingSystem() {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+<b>Click on model to view in AR:::: </b><br><br><br><br>
+<a id = "content" href="https://tpathakethosh.github.io/craneAR.github.io/valve.usdz#custom=https://www.cranefs.com/page/downloads/videos" rel = "ar"">
+     <img src = "valve.png" width = "377" height = "422"/>
+<br><br><br><br>
+ <b>............ Model Viewer ............</b><br><br><br></center>
+ <center><a href="https://www.cranefs.com/page/downloads/videos"> For more information click here </a></center>
 
-      // Windows Phone must come first because its UA also contains "Android"
-    if (/windows phone/i.test(userAgent)) {
-        return "Windows Phone";
-    }
 
-    if (/android/i.test(userAgent)) {
-        return "Android";
-    }
-
-    if (/iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream) {
-        return "iOS";
-    }
-
-    return "unknown";
-}
-       
-    </script> 
-</body> 
-  
-</html> 
+ 
+    </body>
+</html>
