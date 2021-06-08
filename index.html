@@ -1,0 +1,57 @@
+<!DOCTYPE HTML> 
+<html> 
+  
+<head> 
+    <title> 
+        JavaScript  
+      | Detecting the Operating System of User. 
+    </title> 
+</head> 
+  
+<body style="text-align:center;" id="body"> 
+  
+    
+   
+ <script> 
+    var os = getMobileOperatingSystem();
+    if (os == 'iOS')
+
+    {
+        console.log("ios");
+        window.location.replace("valve.usdz");
+       "iOS" +'<br>';
+       document.write(ios);
+    }
+    else if(os == 'Android')
+    {
+        console.log("Android");
+        window.location.replace("valve.html");
+        document.write(android);
+    
+        "android" +'<br>';
+    }
+    
+    
+    function getMobileOperatingSystem() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+      // Windows Phone must come first because its UA also contains "Android"
+    if (/windows phone/i.test(userAgent)) {
+        return "Windows Phone";
+    }
+
+    if (/android/i.test(userAgent)) {
+        return "Android";
+    }
+
+    if (/iPad|iPhone|iPod/i.test(userAgent) && !window.MSStream) {
+        return "iOS";
+    }
+
+    return "unknown";
+}
+       
+    </script> 
+</body> 
+  
+</html> 
